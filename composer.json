@@ -1,6 +1,6 @@
 {
     "name": "phil/qr-code-bundle",
-    "description": "phil/qr-code in Symfony: configured defaults, qr_code() in Twig as inline SVG or a data URI, an accessible Twig component, a signed route that serves SVG or PNG with an HTTP cache, the qrCode block of UJO documents and QR codes drawn in PDF documents",
+    "description": "phil/qr-code in Symfony: QR codes in Twig, in an accessible component, at a cached signed address, in UJO (Universal JSON Output) documents and in PDFs.",
     "license": "MIT",
     "type": "symfony-bundle",
     "keywords": [
@@ -29,7 +29,7 @@
         "symfony/http-foundation": "^8.2",
         "symfony/http-kernel": "^8.2",
         "symfony/routing": "^8.2",
-        "twig/twig": "^3.21"
+        "twig/twig": "^3.31.1"
     },
     "require-dev": {
         "ext-gd": "*",
@@ -40,7 +40,7 @@
         "symfony/browser-kit": "^8.2",
         "symfony/framework-bundle": "^8.2",
         "symfony/twig-bundle": "^8.2",
-        "symfony/ux-twig-component": "^3.7"
+        "symfony/ux-twig-component": "^3.8"
     },
     "suggest": {
         "phil/paged-media": "For PdfQrCodes, the QR codes drawn in a PDF document",

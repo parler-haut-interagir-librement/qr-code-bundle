@@ -5,6 +5,21 @@ All notable changes to `phil/qr-code-bundle` will be documented in this file.
 Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) principles, and versions follow
 [Semantic Versioning](https://semver.org/).
 
+## 0.1.1-alpha - 2026-11-25
+
+### Changed
+
+- Requires the latest minor of each dependency (`twig/twig` 3.31), and of each development requirement
+  (`symfony/ux-twig-component` 3.8).
+
+### Security
+
+- Requires `twig/twig` 3.31.1 or later, which fixes the advisories of its sandbox published on 2026-11-24.
+- The addresses of the images were signed by a `UriSigner` under the secret itself, as the `uri_signer` of
+  FrameworkBundle signs the fragments: a signature made for one could pass for the other. `QrCodeUriSigner` builds the
+  signer under a key derived by HKDF-SHA256 under `phil_qr_code.image_url`. An image address signed before the update
+  stops working: render the page again.
+
 ## 0.1.0-alpha - 2026-11-11
 
 ### Added
